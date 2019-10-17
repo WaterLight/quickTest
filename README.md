@@ -2,16 +2,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Bài 1:
 
-In the project directory, you can run:
+Write a function to find the strings’ length that appear most in this array.
 
 ### Bài 2:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Write a function to find sum of integers on top 2
 
 ### Bài 3:
 
-
+Reactjs
