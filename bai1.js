@@ -1,5 +1,6 @@
-function sortArr(arr) {  
-  let cloneArr = [].concat(arr); 
+// Sort function
+const sortArr = (input) => {  
+  let cloneArr = [].concat(input); 
 
   let str = cloneArr.sort((a,b) => {
     return (
@@ -8,15 +9,21 @@ function sortArr(arr) {
     )
   }).pop();
 
-  return arr.filter( (v) => {
-    return v.length === str.length
-  })
+  return input.filter(v =>  v.length === str.length)
 };
-  
-const strArray1 = ["a","a","a", "ab", "abc", "cd", "def", "gh"];
 
-const strArray2 = ["a", "ab", "abc", "cd", "def", "gh"];
+// Unit Test:
+const assert = (fun, input, expected) => {
+  return `input=${input}, expected: ${expected}, out put: ${fun(input)}`;
+ }
 
-const arr = sortArr(strArray1);
-console.log(arr);
+// Test cases:
+let testCases = [
+  {input: ["a","a","a","a","ab", "abc", "cd", "def", "gh"], expected: ["a","a","a","a"] },
+  {input: ["a", "ab", "abc", "cd", "def", "gh"], expected: ["ab", "cd", "gh"]},
+  {input: ["a", "ab", "abc", "cd", "def", "ghi"], expected: ["abc", "def", "ghi"]},
+]
 
+let testResult = testCases.map(d => assert(sortArr, d.input, d.expected))
+
+console.log(testResult);
